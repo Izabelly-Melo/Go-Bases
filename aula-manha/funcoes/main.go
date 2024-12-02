@@ -7,13 +7,13 @@ import (
 
 func main() {
 	fmt.Println("Exercicio 1")
-	fmt.Println(exerc1(50000.00))
+	fmt.Println(exerc1(140000.00))
 
 	fmt.Println("\nExercicio 2")
-	fmt.Println("A média das notas é:", exerc2(10, 10, 5, 10))
+	fmt.Println("A média das notas é:", exerc2(-10, 10, 5, 10))
 
 	fmt.Println("\nExercicio 3")
-	fmt.Printf("Total do salário %.2f\n", exerc3(60000, "C"))
+	fmt.Printf("Total do salário %.2f\n", exerc3(60, "C"))
 
 	fmt.Println("\nExercicio 4")
 	exerc4()
@@ -32,10 +32,10 @@ deduzido e se a pessoa ganha mais de US$ 150.000, 10% também será deduzido (27
 func exerc1(salario float64) float64 {
 	var imposto float64
 
-	if salario >= 50000.00 && 150000.00 <= salario {
-		imposto = 0.17 * salario
-	} else if salario > 150000.00 {
+	if salario > 150000.00 {
 		imposto = 0.27 * salario
+	} else if salario > 50000.00 {
+		imposto = 0.17 * salario
 	}
 
 	return imposto
