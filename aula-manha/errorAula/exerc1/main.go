@@ -1,12 +1,11 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
 func main() {
-	salary := 1500000
+	salary := 150000
 	exerc1(salary)
 
 }
@@ -20,17 +19,26 @@ menor que 150.000. Caso contrário, será necessário imprimir no console a mens
 */
 
 func exerc1(salary int) {
-	erro := errorSalary{}
-	erro2 := fmt.Errorf("error: %w", erro)
-	if salary < 150000 {
-		fmt.Println(errors.Unwrap(erro2))
+	erro := valida(salary)
+	if erro != nil {
+		fmt.Println(erro.Error())
 	} else {
 		fmt.Println("Must pay tax")
 	}
+
 }
 
-type errorSalary struct{}
+type ErrorSalary struct {
+	mensagem string
+}
 
-func (e errorSalary) Error() string {
-	return "Error: the salary entered does not reach the taxable minimum"
+func (e ErrorSalary) Error() string {
+	return e.mensagem
+}
+
+func valida(salario int) error {
+	if salario < 150000 {
+		return ErrorSalary{"Error: the salary entered does not reach the taxable minimum"}
+	}
+	return nil
 }

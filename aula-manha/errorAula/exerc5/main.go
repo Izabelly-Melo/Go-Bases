@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	exerc5(140, 200)
+	exerc5(30, 10)
 }
 
 /*
@@ -32,7 +32,7 @@ func validaSalario(salario float64, horas int) (float64, error) {
 	var result float64
 	var erro error
 
-	if salario > 0 && salario >= 150000 {
+	if salario >= 150000 {
 		result = salario * 0.10
 	} else {
 		result = 0.0

@@ -36,4 +36,5 @@ Use a recover para recuperar o valor de qualquer pânico que possa ocorrer.
 Lembre-se de realizar as validações necessárias para cada retorno que possa conter um valor de erro.
 Gere um erro, personalizando-o de acordo com sua preferência usando uma das funções Go (execute
 também a validação relevante para o caso de erro retornado).
+
 */

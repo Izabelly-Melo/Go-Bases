@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
-	exerc2()
+	exerc2("customer.txt")
 }
 
 /*
@@ -28,7 +29,7 @@ exemplo:
 	defer file.Close()
 */
 
-func exerc2() {
+func exerc2(arquivo string) {
 	defer func() {
 		err := recover()
 		if err != nil {
@@ -36,13 +37,21 @@ func exerc2() {
 		}
 	}()
 
-	erroCriacao := os.WriteFile("customers.txt", []byte(""), 0644)
-	if erroCriacao != nil {
-		panic("erro ao criar arquivo")
+	dir, _ := os.Getwd()
+
+	filename := filepath.Join(dir, arquivo)
+	file, err := os.Open(filename)
+	if err != nil {
+		panic("Erro ao abrir arquivo\n" + err.Error())
 	}
 
-	_, erro := os.ReadFile("customers.txt")
+	result, erro := os.ReadFile(arquivo)
+
 	if erro != nil {
-		panic("Erro ao ler o arquivo")
+		panic("The indicated file was not found or is damaged")
 	}
+
+	fmt.Println(string(result))
+
+	defer file.Close()
 }
