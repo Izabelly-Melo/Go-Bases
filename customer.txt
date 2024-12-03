@@ -1,4 +1,0 @@
-- Name: izabelly
-- ID: 2
-- Phone number: 9999-9999
-- Adress: rua zero
