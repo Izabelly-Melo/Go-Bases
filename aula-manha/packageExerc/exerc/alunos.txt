@@ -1,0 +1,6 @@
+==Aluno==
+
+Matrícula: 71a5e33f-d2ef-48a9-bdaa-e87dcf05efdc
+Nome: 3234
+Telefona: 23423
+Email: 233233
