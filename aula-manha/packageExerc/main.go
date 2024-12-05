@@ -34,6 +34,6 @@ func main() {
 		return
 	}
 	// Passo 4: Exibir os dados no console
-	fmt.Println("\nConteúdo do arquvio:")
+	fmt.Println("\nConteúdo do arquivo:")
 	fmt.Println(string(data))
 }

@@ -1,6 +1,2 @@
-==Aluno==
-
-Matrícula: 71a5e33f-d2ef-48a9-bdaa-e87dcf05efdc
-Nome: 3234
-Telefona: 23423
-Email: 233233
+Matricula: 893bf179-cc5f-4ef8-987e-970aec24ed3b, Nome: wewq, Telefone:wqeqw, Email: qweqw
+Matricula: 482147b6-2824-4fc4-a25a-c06999fa9f28, Nome: sadd, Telefone:adsad, Email: ada
