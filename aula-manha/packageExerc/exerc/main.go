@@ -67,7 +67,7 @@ func main() {
 				fmt.Println("Erro ao escrever no arquivo", err)
 				return
 			}
-			fmt.Println("Aluno cadastrado com sucesso!\n")
+			fmt.Println("Aluno cadastrado com sucesso!")
 
 		case 2:
 			println(listarAlunos())
